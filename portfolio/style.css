@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap');
+
+:root {
+  --background-color: #0c182e;
+  --primary-color: #64ffda;
+  --secondary-color: #101f3b;
+  --navy-color: #233554;
+  --slate-color: #8892b0;
+  --slate-color-light: #a8b2d1;
+  --slate-color-lighter: #ccd6f6;
+  --slate-color-lightest: #e6ebff;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body{
+ background-color:var(--secondary-color);
+  overflow-x: hidden;
+  font-family: "Quicksand", sans-serif;
+ color: #8892b0;
+ font-size:1.2rem;
+ line-height: 1.5;
+}
+
+/*NAVBAR*/
+.remove-btn{
+  display: none;
+  width: 1rem;
+  height: 1rem;
+  margin: 1.5rem 1.5rem 0 0;
+  cursor: pointer;
+  color:#ccd6f6 ;
+}
+.menu-btn{
+  display: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.navbar{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  color: #ccd6f6;
+  background-color: var(--navy-color);
+  opacity: 70%;
+}
+.nav-links{
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a{
+  text-decoration: none;
+  color:#8892b0;
+  margin:0 30px ;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.nav-links li a:hover{
+  color: #64ffda;
+  background-color:  var(--background-color);
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.logo{
+  color: #64ffda;
+}
+
+/*container*/
+
+#header{
+  display: flex;
+  flex-direction: column;
+   width: 100%;
+   justify-content: center;
+}
+
+.name-sediqa{
+  margin:11rem  auto 0 10rem;
+  
+}
+
+h4{
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #64ffda;
+}
+
+.name-sediqa h1{
+  font-weight: 700;
+  font-size: 4rem;
+  color: #ccd6f6;
+}
+.name-sediqa strong{
+  color: #ccd6f6;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/*ALL ABOUT ME*/
+
+#about{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.who-i-am{
+  display:flex;
+  gap: 1rem;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.line{
+  border: 0.1px solid var(--navy-color);
+  width: 30rem;
+  height: 2px;
+ margin-top: 5px;
+}
+
+
+.information{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin: 3rem 5rem 3rem 8rem;
+}
+
+.information p{
+ margin-right: 3rem;
+text-align:justify;
+ width: 50%;
+}
+
+.information img{
+  width:20rem;
+  height:25rem;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  border-radius: 1rem;
+}
+
+.information img:hover{
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+
+
+/*PROJECTS SECTION*/
+
+#projects{
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+   grid-gap: 40px;
+   padding: 20px;
+   margin: 5rem;
+}
+
+.projects{
+  background-color:transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border-radius: 8px; 
+   overflow: hidden; 
+   transition: transform 0.3s;
+  text-align: center;
+  height: 27.5rem;
+  position: relative;
+  cursor:default;
+}
+
+.projects img{
+    width:88% ;
+     height: 45%;
+     align-self: center;
+     border-radius: 0.5rem;
+     filter: grayscale(100%);
+     margin-top: 1rem;
+     opacity: 0.7;
+     cursor: pointer;
+}
+
+.projects-content {
+  margin-top: 0.3rem;
+}
+
+.projects-content a h3 {
+  color: #64ffda;
+  margin-bottom: 0.2rem;
+  text-decoration: none;
+}
+
+.projects-content a{
+   text-decoration: none;
+}
+
+
+.projects-content p{
+  text-align: start;
+  margin:  0 1rem ;
+}
+.projects-content p a{
+  color: #8892b0;
+  font-weight: bold;
+}
+
+.view-hidden{
+  display: flex;
+  position:absolute;
+  left: 50%;
+  top: 30%;
+  gap: 0.5rem;
+  transform: translate(-50%, -50%);
+  transition: opasity 0.5s ease;
+  opacity:0;
+}
+.projects img:hover,
+.view-hidden:hover{
+  opacity: 1;
+  filter: grayscale(0%);
+  transition: color 0.5s ease, background-color 0.5s ease;
+  
+}
+
+.view-hidden a { 
+  color: #8892b0;
+  font-size: 1.5rem; 
+  text-decoration: none; 
+  background-color: #0c182e;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.view-hidden a:hover{
+  color: #64ffda;
+}
+
+/*CONTACT SECTION*/
+.contact-section{
+ display:flex;
+ flex-direction: column;
+ gap: 4rem;
+  padding: 4rem 6rem 5rem 8.5rem;
+  position: relative;
+}
+
+.email-container input{
+  width: 30%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  padding: 20px 45px 20px 20px;
+  cursor: pointer;
+}
+
+.email-container input::placeholder{
+  color: #a8b2d1;
+}
+.email-container  input:hover::placeholder {
+  color: #64ffda;
+  }
+
+
+.email-container i {
+  position: absolute;
+  left:32%;
+  top: 66.8%;
+  font-size: 20px;
+}
+.email-container i:hover{
+  color: #64ffda;
+}
+
+.social-links{
+  position: absolute;
+  top:64.6%;
+  left: 40%;
+  font-size: 1rem;
+}
+
+
+.social-links a{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: transparent;
+  padding:20px;
+  color: #8892b0;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+.email-container input:hover,
+.social-links a:hover{
+  color:#64ffda;
+  box-shadow: 0 8px 16px 0 rgba(100, 255, 218, 0.4), 0 12px 40px 0 rgba(100, 255, 218, 0.38);
+}
+
+#footer p{
+   font-size:0.8rem;
+   justify-self: end;
+   margin: 0 1rem 1rem 0;
+}
+
+
+/* responsive design*/
+
+@media  (max-width:768px){
+
+  /*NAVBAR*/
+  .menu-btn{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    color:#ccd6f6 ;
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+  }
+
+  .remove-btn,
+  .menu-btn:hover{
+    color: #64ffda;
+  }
+
+  .navbar{
+    padding: 0;
+  }
+  .logo{
+   position: absolute;
+   top: 1.2rem;
+   left:1.2rem;
+  color:#64ffda;
+  }
+  .nav-links{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background:#233554;
+    margin-top: -900px;
+    transition:all 0.5s ease;
+  }
+  .mobile-menu{
+   margin-top: 0px;
+    border-bottom-right-radius: 40%;
+  }
+
+  .nav-links li{
+    margin: 30px auto;
+    color:aliceblue;
+  }
+
+  main{
+    margin:2rem;
+  }
+  /*HEADER*/
+  #header{
+    display: flex;
+    flex-direction: column;
+     width: 100%;
+     justify-content: center;
+  }
+  
+  .name-sediqa{
+   margin:11rem 0  0.5rem  0 ;
+    
+  }
+  
+  h4{
+    font-weight: 400;
+    font-size:1.2rem;
+  }
+  
+  .name-sediqa h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  .name-sediqa strong{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .line{
+    display:none;
+  }
+
+  .who-i-am{
+    align-self: center;
+    margin-top: 1rem;
+  }
+  .title{
+       display: flex;
+       justify-content: center;
+       margin: 1rem;
+  }
+.information{
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+  gap:0;
+}
+.information p{
+ width: 100%;
+}
+.information img{
+  align-self: center;
+  height: 100%;
+  margin: 1.5rem 0;
+}
+
+/*PROJECTS SECTION*/
+#projects{
+grid-template-columns: 1fr;
+margin:0;
+}
+.projects{
+width:100%;
+padding: 26px;
+}
+.projects img{
+    width:100% ;
+}
+
+/*CONTACT SECTION*/
+.contact-section{
+  margin: 0;
+  padding: 0;
+  position: relative;
+   }
+   .contact-section p{
+    text-align: justify;
+   }
+   .email-container{
+    margin-bottom: 6rem;
+   }
+ .email-container input{
+   width: 50%;
+  }
+ .email-container i {
+   top:60.5%;
+   left: 42%;
+ }
+ .social-links{
+   top: 60.5%;
+   left: 55%;
+ }
+ #footer {
+ padding: 0;
+ margin-right: 0;
+ }
+  }
+
+  /*MOBILE  DEVICE*/
+
+@media(max-width:600px) {
+
+  .logo{
+    top: 0.5rem;
+    left:3rem;
+   }
+
+  /*CONTACT SECTION*/
+
+   .email-container input{
+     width: 100%;
+     padding-left: 2.5rem;
+    }
+   .email-container i {
+     left: 4%;
+     top:71%;
+   }
+   .social-links{
+     top:87%;
+     left: 18%;
+   }
+}
+
