@@ -57,10 +57,7 @@ ul{
   width: 100%;
   justify-content: space-between;
   padding: 20px;
-  position: fixed;
   color: #ccd6f6;
-  background-color: var(--navy-color);
-  opacity: 70%;
 }
 .nav-links{
   display: flex;
